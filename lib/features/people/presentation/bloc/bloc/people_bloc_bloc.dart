@@ -25,6 +25,7 @@ class PeopleBlocBloc extends Bloc<PeopleBlocEvent, PeopleBlocState> {
           emit(state.copyWith(status: PeopleError(dataState.error!)));
           break;
         default:
+        // nothing to do
         emit(state.copyWith(status: PeopleError('Unknown error')));
       }
     });
